@@ -1,0 +1,11 @@
+<!--pages/personal/edit/edit.wxml-->
+
+<view class='edit_box'>
+    <view class='edit'>
+        <input type='text' placeholder='请输入姓名' wx:if="{{show==1}}"></input>
+        <input type='number' placeholder='请输入手机号' wx:elif="{{show==2}}"></input>
+        <input type='text' wx:else placeholder='请输入车牌号'></input>
+    </view>
+</view>
+
+<view class='btn' bindtap='sure'>确认</view>

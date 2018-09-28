@@ -1,0 +1,11 @@
+<!--pages/earn_points/earn_points.wxml-->
+<view>
+    <navigator class='earn_list' url='/pages/earn_details/earn_details?id={{item.id}}' wx:for="{{lists}}">
+        <view class='earn_title ellipsis'>{{item.title}}</view>
+        <image class='earn_img' src='{{item.picUrl}}'></image>
+        <view class='xui_flex earn_tips'>
+            <view class='xui_flex_item'>浏览获积分 免费洗车</view>
+            <text>{{item.publisher}}</text>
+        </view>
+    </navigator>
+</view>

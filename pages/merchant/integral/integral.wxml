@@ -1,0 +1,19 @@
+<!--pages/personal/integral/integral.wxml-->
+<view>
+    <view class='top_integ'>
+          <view class='integ_num'>20</view>
+          <text>我的积分</text>
+          <view class='btn integ_btn'>充值</view>
+    </view>
+
+    <!-- <view class='integ_box'>
+          <view class='xui_flex integ_list'>
+              <view class='xui_flex_item'>完善个人资料信息</view>
+              <text class='xui_lt'>+10积分</text>
+          </view>
+          <view class='xui_flex integ_list'>
+              <view class='xui_flex_item'>浏览寿险服务点赞</view>
+              <text class='xui_lt'>+1~2积分</text>
+          </view>
+    </view> -->
+</view>

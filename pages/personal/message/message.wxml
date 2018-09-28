@@ -1,0 +1,39 @@
+<!--pages/personal/message/message.wxml-->
+
+<view>
+    <view class='xui_flex fill_list' bindtap='upHeader'>
+        <text>头像</text>
+        <view class='xui_flex_item fill_info fill_info_1'>
+            <image src='{{img}}' mode='aspectFill' class='tx'></image>
+        </view>
+    </view>
+
+    <navigator class='xui_flex fill_list' url="/pages/personal/edit/edit?type=姓名">
+        <text>姓名</text>
+        <view class='xui_flex_item fill_info xui_lt'>{{name}}</view>
+    </navigator>
+     <view class='xui_flex fill_list'>
+        <text>性别</text>
+        <view class='xui_flex_item fill_info xui_lt'>{{sex}}</view>
+    </view>
+     <navigator class='xui_flex fill_list' url="/pages/personal/edit/edit?type=手机号码">
+        <text>手机号码</text>
+        <view class='xui_flex_item fill_info xui_lt'>{{tel}}</view>
+    </navigator>
+     <navigator class='xui_flex fill_list' url="/pages/personal/edit/edit?type=车牌号">
+        <text>车牌号</text>
+        <view class='xui_flex_item fill_info xui_lt'>{{plate}}</view>
+    </navigator>
+     <view class='xui_flex fill_list'>
+        <text>车险到期时间</text>
+        <view class='xui_flex_item fill_info xui_lt'>(选填)</view>
+    </view>
+     <view class='xui_flex fill_list'>
+        <text>驾照到期时间</text>
+        <view class='xui_flex_item fill_info xui_lt'>(选填)</view>
+    </view>
+     <view class='xui_flex fill_list'>
+        <text>发动机号</text>
+        <view class='xui_flex_item fill_info xui_lt'>(选填)</view>
+    </view>
+</view>

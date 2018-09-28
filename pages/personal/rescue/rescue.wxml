@@ -1,0 +1,20 @@
+<map id="map"  scale="{{scale}}" bindcontroltap="controltap" markers="{{markers}}" 
+latitude="{{latitude}}"
+longitude ="{{longitude}}"
+controls="{{controls}}" show-location bindregionchange="regionchange" style="width: 100%; height: {{view.Height}}px;">
+      <cover-view class='bottom_fun'>
+          <cover-view class='index_btn xui_flex xui_align_items' bindtap='linksite'>
+            <cover-view class='xui_flex_item'>救援站点</cover-view>
+          </cover-view>
+    
+      </cover-view>
+</map>
+
+      
+     
+
+      
+
+
+
+

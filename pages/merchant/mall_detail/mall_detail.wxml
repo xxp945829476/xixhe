@@ -1,0 +1,45 @@
+<view>
+    <view class='de_top'>
+        <image src='/images/hbdh.jpg' mode='widthFix'></image>
+    </view>
+
+    <view class='xui_flex tip_d'>
+        <view class='xui_flex_item'>红包兑换卡</view>
+        <text>300积分</text>
+    </view>
+    <view class='xui_flex sel_box xui_align_items'>
+        <text class='iconfont icon-jian'></text>
+        <view class='f_ad'>
+            <input type='text' value='{{num}}'></input>
+        </view>
+        <text class='iconfont icon-jia'></text>
+    </view>
+
+    <view class='ds_box'>
+        <view class='ds'>商品介绍</view>
+        <text>该红包兑换卡，可根据数量自行选择，购买后可在“我的卡券”中查看使用。</text>
+    </view>
+
+    <view class='bay_btn'>积分购买</view>
+</view>
+
+
+<!-- 弹窗  -->
+
+<view class='modal_box' wx:if="{{show}}">
+    <view class='modal'>
+        <view>
+           <view class='modal_contant'>
+                确定消耗300积分购买红包兑换卡？
+           </view>
+        </view>
+        <view class='modal_btn xui_flex' >
+            <view class='xui_flex_item center modal_btn'>
+                取消
+            </view>
+            <view class='xui_flex_item center modal_btn sure'>
+                确认
+            </view>
+        </view>
+    </view>
+</view>

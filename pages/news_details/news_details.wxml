@@ -1,0 +1,14 @@
+<!--pages/news_details/news_details.wxml-->
+
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view>
+    <view class='article_title_box'>
+        <view>{{title}}</view>
+        <text>{{eyes==null?'0':eyes}}浏览</text>
+    </view>
+
+    <view class='content'>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+</view>

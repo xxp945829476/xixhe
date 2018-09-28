@@ -1,0 +1,11 @@
+<!--pages/personal/record/record.wxml-->
+<view>
+    <view class='xui_flex record_list xui_align_items' wx:for='{{lists}}'>
+        <view class='xui_flex_item'>
+            <view class='re_title'>{{item.title}}</view>
+            <view class='re_time'>[{{item.type}}]  <text>{{item.createTime}}</text></view>
+        </view>
+        <view class='re_xf'>{{item.money}}</view>
+    </view>
+
+</view>

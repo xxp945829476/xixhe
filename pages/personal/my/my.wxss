@@ -1,0 +1,94 @@
+/**index.wxss**/
+page{
+  background: #f5f3f1;
+}
+.my_top_box{
+  background: linear-gradient(to right, #4d4f67 , #575980);
+  padding: 30rpx 0rpx 30rpx 40rpx;
+  color: #fff;
+  position: relative;
+}
+.tx_top image{
+  border: 4rpx solid #7d7fb6;
+  width: 120rpx;
+  height: 120rpx;
+  display: block
+}
+.top_name{
+  font-size: 34rpx;
+  margin-bottom: 14rpx;
+}
+.top_tip{
+  font-size: 24rpx;
+  background: #787a9f;
+  padding: 8rpx 20rpx;
+  border-radius: 80rpx;
+}
+.switch_top{
+  background: #3a3b54;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  width: 150rpx;
+  text-align: center;
+  border-radius: 30rpx  0 0 30rpx;
+}
+.my_icon{
+  width: 100rpx;
+  height: 100rpx;
+}
+.nav_my{
+  justify-content: center;
+}
+.nav_my_1{
+  border-left: 1rpx solid #f8f8f8;
+}
+.link{
+  font-size: 24rpx;
+}
+.link_a{
+  text-decoration: underline;
+}
+.nav_my_box{
+  background: #fff;
+  padding: 38rpx 0;
+}
+.link_jy_box{
+  padding: 40rpx 30rpx;
+}
+.link_jy{
+  width: 100%;
+}
+.contact{
+  background: #fff;
+  padding: 28rpx 30rpx;
+}
+
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.hq_tx{
+  background: #fff;
+  font-size: 30rpx;
+}
+.hq_tx:after{
+   border: none;
+}

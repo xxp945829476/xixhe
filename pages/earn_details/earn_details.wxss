@@ -1,0 +1,67 @@
+/* pages/earn_details/earn_details.wxss */
+
+.d_box{
+  padding: 20rpx 30rpx;
+}
+.d_title{
+  font-size: 34rpx;
+  margin-bottom: 20rpx;
+}
+.earn_tips{
+  font-size: 26rpx;
+  color: #A1A1A1;
+}
+.earn_tips .xui_flex_item{
+  color: #FF9966;
+}
+.contant{
+  padding: 0 30rpx;
+  line-height: 1.8;
+}
+.contant image{
+  width: 100%;  
+}
+
+.btn_arn{
+  width: 140rpx;
+  height: 140rpx;
+  background: #ff9933;
+  color: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.btn_hey{
+  background: #ccc;
+}
+.cen{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1.4;
+}
+.zan{
+  font-size: 34rpx;
+}
+.cen text{
+  font-size: 20rpx;
+}
+.earn_btn_box{
+  justify-content:center;
+  margin-top: 60rpx;
+}
+.tb{
+  margin-left: 140rpx;
+  background: #66ccff;
+}
+.eyes{
+  font-size: 34rpx;
+  color: #BCBCBC;
+  padding-left: 30rpx;
+}
+.eyes text{
+   font-size: 60rpx;
+   vertical-align: -6rpx;
+   padding-right: 12rpx;
+}

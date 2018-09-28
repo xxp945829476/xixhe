@@ -1,0 +1,47 @@
+/* pages/personal/admission/admission.wxss */
+
+.admiss_list{
+  padding: 26rpx 30rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.admiss_list_1{
+  padding-right: 60rpx;
+}
+.admiss{
+  color: #999999;
+  text-align: right
+}
+.tips{
+  font-size: 20rpx;
+  padding: 20rpx 30rpx;
+  color: #0099FF;
+}
+.textarea_box{
+  padding: 30rpx;
+  margin-bottom: 60rpx;
+}
+.textarea{
+  border: 1rpx solid #f8f8f8;
+  text-align: center;
+  width: 100%;
+  padding: 40rpx 0;
+}
+.up_title{
+  padding:26rpx 0 20rpx 0;
+}
+.up_img{
+  border: 1rpx dashed #333;
+  border-radius: 10rpx;
+}
+.up_img image{
+   width: 100%;
+}
+
+.jy_sm{
+  text-align: center;
+  font-size: 24rpx;
+  margin:80rpx 0 150rpx;
+}
+.jy_sm text{
+  color: #0099FF;
+}

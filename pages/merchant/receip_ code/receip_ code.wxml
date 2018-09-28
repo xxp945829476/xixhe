@@ -1,0 +1,10 @@
+<!--pages/merchant/receip_ code/receip_ code.wxml-->
+
+<view>
+    <view class='ewm'>
+        <image src='/images/u14.png'></image>
+        <text>*此为商家积分收款二维码</text>
+    </view>
+    <view class='btn'>下载</view>
+</view>
+

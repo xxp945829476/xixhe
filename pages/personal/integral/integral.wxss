@@ -1,0 +1,37 @@
+/* pages/personal/integral/integral.wxss */
+page{
+  background: #f5f3f1;
+}
+.top_integ{
+  text-align: center;
+  background: #fff;
+  padding: 40rpx 0;
+  margin-top: 4rpx;
+}
+.integ_num{
+  font-size: 60rpx;
+}
+.top_integ text{
+  display: block;
+  margin:5rpx 0 15rpx;
+  font-size: 24rpx;
+}
+.integ_btn{
+  width: 130rpx;
+  font-size: 26rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  border-radius: 6rpx;
+}
+.integ_box{
+  background: #fff;
+  margin-top: 20rpx;
+}
+.integ_list{
+  padding: 30rpx 0 30rpx 30rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.integ_list text{
+  padding-right: 60rpx;
+  color: #FF6666;
+}

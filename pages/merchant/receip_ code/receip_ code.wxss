@@ -1,0 +1,14 @@
+/* pages/merchant/receip_ code/receip_ code.wxss */
+.ewm{
+  text-align: center;
+  margin: 60rpx 0;
+}
+.ewm image{
+  width: 420rpx;
+  height: 420rpx;
+}
+.ewm text{
+  display: block;
+  color: #AEAEAE;
+  margin-top: 40rpx;
+}

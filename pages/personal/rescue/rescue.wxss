@@ -1,0 +1,97 @@
+.bottom_fun{
+  position:absolute;
+  bottom: 20rpx;
+  z-index: 999;
+  width: 100%;
+  height: 220rpx; 
+}
+
+.index_btn{
+  width: 300rpx;
+  margin: 20rpx auto;
+  background: #4b4c5e;
+  border-radius: 44rpx;
+  text-align: center;
+  color: #fff;
+  height: 80rpx;
+}
+.jf_tip{
+  font-size: 20rpx;
+}
+.my_box{
+  background: #fff;
+  width: 80rpx;
+  height: 80rpx;
+   border-radius: 50%; 
+  text-align: center;
+  box-shadow: 0rpx 10rpx 10rpx #ccc;
+  line-height: 80rpx;
+}
+.img{
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.meun_box{
+  height: 100rpx;
+  padding: 0 40rpx;
+  position: fixed;
+  top: 60rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.meun_list_box{
+  position: fixed;
+  top: 200rpx;
+  background: #4b4c5e;
+  right: -300rpx;
+  color: #fff;
+  width: 240rpx;
+  transition: all 5s;
+}
+.meun_list{
+  padding: 30rpx;
+  font-size: 32rpx;
+
+}
+.img_1{
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 10rpx;
+}
+
+.on{
+  animation: left 0.5s both;
+}
+.right{
+    animation: right 0.5s both;
+}
+
+
+
+@keyframes left
+{
+  from {right: -300rpx;}
+  to {right: 0rpx;}
+}
+@-webkit-keyframes left
+{
+  from {right: -300rpx;}
+  to {right: 0rpx;}
+}
+
+/* @keyframes right
+{
+  from {right: 0rpx; opacity: 1;}
+  to {right: -300rpx; opacity: 0;}
+}
+@-webkit-keyframes right
+{
+  from {right: 0rpx;}
+  to {right: -300rpx;}
+} */
+
+

@@ -1,0 +1,44 @@
+<!--pages/personal/appointment/appointment.wxml-->
+<!--pages/personal/admission/admission.wxml-->
+
+<view>
+    <view class='admiss_box'>
+          <view class='xui_flex admiss_list admiss_list_1'>
+              <view>获取门店坐标</view>
+              <view class='admiss xui_flex_item'>请获取</view>
+              <text class='xui_lt'></text>
+          </view>
+    </view>
+     <view class='admiss_box'>
+          <view class='xui_flex admiss_list admiss_list_1'>
+              <view>车型</view>
+              <view class='admiss xui_flex_item'>请选择</view>
+              <text class='xui_lt'></text>
+          </view>
+    </view>
+     <view class='admiss_box'>
+          <view class='xui_flex admiss_list'>
+              <view>手机号</view>
+              <view class='admiss xui_flex_item'>
+                  <input type='text' placeholder='请输入手机号码' placeholder-style='color:#999'></input>
+              </view>
+          </view>
+    </view>
+    <view class='admiss_box'>
+          <view class='xui_flex admiss_list'>
+              <view>车牌号</view>
+              <view class='admiss xui_flex_item'>
+                <input type='text' placeholder='请输入' placeholder-style='color:#999'></input>
+              </view>
+          </view>
+    </view>
+
+    <view class='jy_sm'>
+        <view>救援费用双方协商解决</view>
+        <text>商家优惠说明</text>
+    </view>
+    
+
+    <view class='btn subsit'>提交入驻</view>
+    
+</view>

@@ -1,0 +1,48 @@
+/* pages/merchant/mall_detail/mall_detail.wxss */
+
+.de_top image{
+  width: 100%;
+}
+
+.sel_box{
+  color: #999999;
+  padding: 0 30rpx;
+}
+.sel_box text{
+     font-size: 50rpx;
+}
+.sel_box input{
+  border: 1rpx solid rgb(219, 215, 215);
+  width: 100rpx;
+  text-align: center;
+}
+.f_ad{
+  margin: 0 20rpx;
+}
+.tip_d{
+  padding: 20rpx 30rpx;
+}
+.tip_d text{
+  color: #FF583E;
+}
+.ds_box{
+  padding:40rpx 30rpx;
+}
+.ds{
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+}
+.ds_box text{
+  font-size: 26rpx;
+}
+
+.bay_btn{
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  background: rgb(75, 76, 94);
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #fff;
+}

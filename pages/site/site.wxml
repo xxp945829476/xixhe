@@ -1,0 +1,17 @@
+<!--pages/site/site.wxml-->
+
+<view>
+      <view class='xui_flex site_list xui_align_items'>
+        <view class='xui_flex_item'>
+          <view class='site_title'>飞悦洗车行</view>
+          <view class='site_address'>滨湖区大丁佳苑25-5号</view>
+          <view class='site_tel'>吴先生<text>18961179988</text></view>
+        </view>
+          <view class='set_dan'>
+              <view class='site_btn' bindtap='navigation'>导航</view>
+              <text>1.1公里</text>
+          </view>
+      </view>
+      
+</view>
+

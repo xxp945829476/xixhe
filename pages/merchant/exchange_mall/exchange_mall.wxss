@@ -1,0 +1,12 @@
+/* pages/merchant/exchange_mall/exchange_mall.wxss */
+
+.mall_box{
+  padding: 30rpx;
+}
+.mall_box image{
+  width: 222rpx;
+  height: 222rpx;
+}
+.mall_box text{
+  color: #ff9f17;
+}

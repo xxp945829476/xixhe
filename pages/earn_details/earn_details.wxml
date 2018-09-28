@@ -1,0 +1,52 @@
+<!--pages/earn_details/earn_details.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+
+
+<view class='d_box'>
+    <view class='d_title'>{{title}}</view>
+     <view class='xui_flex earn_tips'>
+            <view class='xui_flex_item'>浏览获积分 免费洗车</view>
+            <text>{{publisher}}</text>
+      </view>
+</view>
+
+<view class='contant'>
+     <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+
+<view class='xui_flex earn_btn_box'>
+    <view class="btn_arn {{colorHey?'btn_hey':''}}" bindtap='praise'>
+          <view class='cen'>
+              <view class='zan'>赞</view>
+              <text>点赞获积分</text>
+          </view>
+    </view>
+    <navigator class='btn_arn tb' url='/pages/insure/insure'>
+          <view class='cen'>
+              <view>我要</view>
+              <view>投保</view>
+          </view>
+    </navigator>
+</view>
+
+<view class='eyes'>
+    <text class='iconfont icon-yanjing'></text>{{eyes}}
+</view>
+
+<!-- 弹窗  -->
+
+<view class='modal_box' wx-if='{{show}}'>
+    <view class='modal'>
+        <view>
+           <view class='modal_contant center'>
+                完善信息可点赞免费领积分洗车!
+           </view>
+        </view>
+        <view class='modal_btn xui_flex'>
+            <view class='xui_flex_item center cancel'>取消</view>
+            <view class='xui_flex_item center sure'>立即完善</view>
+        </view>
+    </view>
+</view>
+
+

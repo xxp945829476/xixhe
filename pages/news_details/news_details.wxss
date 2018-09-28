@@ -1,0 +1,17 @@
+/* pages/news_details/news_details.wxss */
+.article_title_box{
+  font-size: 34rpx;
+  padding: 20rpx 30rpx;
+}
+.article_title_box text{
+  color: #A1A1A1;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+  display: block;
+}
+.content{
+  padding: 0 30rpx;
+}
+.content image{
+  width: 100%;
+}

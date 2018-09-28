@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/personal/record/record",
+   
+    "pages/personal/admission/admission",
+    
+    
+    
+    "pages/personal/my/my",
+    "pages/personal/message/message",
+    "pages/personal/edit/edit",
+    "pages/personal/rescueSite/rescueSite",
+    "pages/personal/appointment/appointment",
+    "pages/personal/rescue/rescue",
+    "pages/personal/noadopt/noadopt",
+   
+    
+    "pages/personal/recharge/recharge",
+    "pages/personal/integral/integral",
+    "pages/merchant/my/my",
+    "pages/merchant/receip_ code/receip_ code",
+    "pages/merchant/mall_detail/mall_detail",
+    "pages/merchant/exchange_mall/exchange_mall",
+    "pages/merchant/exchange_card/exchange_card",
+    "pages/merchant/record/record",
+    "pages/merchant/edit/edit",
+    "pages/merchant/message/message",
+    "pages/merchant/rescueSite/rescueSite",
+    "pages/merchant/recharge/recharge",
+    "pages/merchant/integral/integral",
+    "pages/earn_details/earn_details",
+    "pages/news_details/news_details",
+    "pages/insure/insure",
+    "pages/earn_points/earn_points",
+    "pages/Car_news/Car_news",
+    "pages/site/site",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "洗车",
+    "navigationBarTextStyle": "black"
+  }
+}

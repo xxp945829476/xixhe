@@ -1,0 +1,26 @@
+/* pages/personal/record/record.wxss */
+
+page{
+  background: #f5f3f1;
+}
+
+.record_list{
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+  background: #fff;
+}
+.re_title{
+  font-size: 30rpx;
+}
+.re_time{
+  font-size: 26rpx;
+}
+.re_time text{
+  color: #AEAEAE;
+}
+.re_xf{
+  font-size: 36rpx;
+}
+.on{
+  color: #FF583E
+}

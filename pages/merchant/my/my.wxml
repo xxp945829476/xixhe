@@ -1,0 +1,84 @@
+<!--index.wxml-->
+
+<view class='xui_flex my_top_box xui_align_items'>
+    <navigator class='tx_top' url='/pages/merchant/message/message' hover-class='none'>
+         <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </navigator>
+    <navigator class='xui_flex_item' url='/pages/merchant/message/message' hover-class='none'>
+          <view class='top_name'>{{userInfo.nickName}}</view>
+          <text class='top_tip'>企业用户</text>
+    </navigator>
+    <navigator class='switch_top' url='/pages/personal/my/my'>个人切换</navigator>
+</view>
+
+<view class='xui_flex nav_my_box'>
+    <view class='xui_flex_item'>
+        <navigator class='xui_flex nav_my xui_align_items' url='/pages/merchant/integral/integral' hover-class='none'>
+            <image class='my_icon' src='/images/jifen.png'></image>
+            <view>
+                <view>积分  260</view>
+                <view class='link link_a'>我的积分</view>
+            </view>
+        </navigator>
+    </view>
+    <navigator class='xui_flex_item' url='/pages/merchant/exchange_card/exchange_card' hover-class='none'>
+        <view class='xui_flex nav_my nav_my_1 xui_align_items'>
+            <image class='my_icon' src='/images/jl.png'></image>
+            <view>
+                <view>卡卷 3</view>
+                <view class='link link_a'>我的卡卷</view>
+            </view>
+        </view>
+    </navigator>
+</view>
+
+<navigator url='/pages/merchant/rescueSite/rescueSite' class='link_jy_box'>
+    <image class='link_jy' src='/images/dljy.png' mode='widthFix'></image>
+</navigator>
+
+<view>
+    <navigator class='xui_flex contact' url='/pages/merchant/record/record'>
+        <view  class='xui_flex_item'>订单记录</view>
+        <view class='xui_lt contact_1'></view>
+    </navigator>
+    <navigator class='xui_flex contact' url='/pages/merchant/exchange_mall/exchange_mall'>
+        <view  class='xui_flex_item'>兑换商城</view>
+        <view class='xui_lt contact_1'></view>
+    </navigator>
+    <navigator class='xui_flex contact' url='/pages/merchant/receip_ code/receip_ code'>
+        <view  class='xui_flex_item'>商家收款二维码</view>
+        <view class='xui_lt contact_1'></view>
+    </navigator>
+    <view class='xui_flex contact' bindtap='call'>
+        <view  class='xui_flex_item'>联系客服</view>
+        <view>0510-8888888</view>
+    </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+<!-- 弹窗  -->
+
+<view class='modal_box' wx:if="{{show}}">
+    <view class='modal'>
+        <view>
+           <view class='modal_contant'>
+                 微信登录需要获取您的用户信息，请前往设置
+           </view>
+        </view>
+        <view class='modal_btn xui_flex' >
+            <view class='xui_flex_item center'>
+                <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='hq_tx'> 获取头像昵称 </button>
+            </view>
+        </view>
+    </view>
+</view>
+
+

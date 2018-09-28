@@ -1,0 +1,19 @@
+<!--pages/personal/record/record.wxml-->
+<view>
+    <view class='xui_flex record_list xui_align_items'>
+        <view class='xui_flex_item'>
+            <view class='re_title'>洗车消费</view>
+            <view class='re_time'>[积分消费]  <text>09-03 09：40</text></view>
+        </view>
+        <view class='re_xf'>-10</view>
+    </view>
+
+    <view class='xui_flex record_list xui_align_items'>
+        <view class='xui_flex_item'>
+            <view class='re_title'>洗车消费</view>
+            <view class='re_time'>[积分消费]  <text>09-03 09：40</text></view>
+        </view>
+        <view class='re_xf'>+10</view>
+    </view>
+
+</view>

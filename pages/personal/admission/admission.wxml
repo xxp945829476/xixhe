@@ -1,0 +1,52 @@
+<!--pages/personal/admission/admission.wxml-->
+
+<view>
+    <view class='admiss_box'>
+          <view class='xui_flex admiss_list admiss_list_1'>
+              <view>获取门店坐标</view>
+              <view class='admiss xui_flex_item' bindtap='getLoca'>{{tude}}</view>
+              <text class='xui_lt'></text>
+          </view>
+    </view>
+    <view class='tips'>*此地理坐标，关系到客户导航的目的地，请商家务必在门店中获取</view>
+    <view class='cut_line'></view>
+    <view class='admiss_box'>
+          <view class='xui_flex admiss_list'>
+              <view class=''>输入门店地址</view>
+              <view class='admiss xui_flex_item'><input placeholder='请输入' placeholder-style="color:#999" bindinput='bindAdress'></input></view>
+          </view>
+          <view class='xui_flex admiss_list'>
+              <view class=''>门店/企业名称</view>
+              <view class='admiss xui_flex_item'><input placeholder='请输入门店/企业名称' placeholder-style="color:#999" bindinput='bindCompany'></input></view>
+          </view>
+          <view class='xui_flex admiss_list'>
+              <view class=''>联系人</view>
+              <view class='admiss xui_flex_item'><input placeholder='请输入' placeholder-style="color:#999" bindinput='bindContacts'></input></view>
+          </view>
+          <view class='xui_flex admiss_list'>
+              <view class=''>联系电话</view>
+              <view class='admiss xui_flex_item'><input placeholder='请输入联系电话' placeholder-style="color:#999" bindinput='bindTel'></input></view>
+          </view>
+          <view class='xui_flex admiss_list'>
+              <view class=''>服务种类</view>
+              <view class='admiss xui_flex_item'>
+                  <picker bindchange="bindPickerChange" value="{{index}}" range="{{service}}">
+                    <view class="picker">
+                      {{service[index]}}
+                    </view>
+                  </picker>
+              </view>
+          </view>
+    </view>
+
+    <view class='textarea_box'>
+        <textarea wx:if='{{discountShow}}' bindblur="bindTextAreaBlur" class='textarea' auto-height placeholder="请输入您的道路救援业务优惠说明（选填）" />
+        <view class='up_title'>上传营业执照/名片</view>
+        <view class='up_img' bindtap='upPic'>
+            <image src='{{pic}}'></image>
+        </view>
+    </view>
+
+    <view class='btn subsit' bindtap='submit'>提交入驻</view>
+    
+</view>

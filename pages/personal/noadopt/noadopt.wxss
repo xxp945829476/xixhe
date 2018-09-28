@@ -1,0 +1,12 @@
+/* pages/personal/noadopt/noadopt.wxss */
+
+.adpt{
+  text-align: center;
+  margin: 180rpx 0 400rpx;
+  font-size: 30rpx;
+}
+.adpt text{
+  font-size: 80rpx;
+  color: red;
+  
+}

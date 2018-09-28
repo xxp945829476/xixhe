@@ -1,0 +1,35 @@
+/* pages/personal/recharge/recharge.wxss */
+
+.recharge_box{
+  padding: 30rpx;
+}
+.recharge_list{
+  overflow: hidden;
+  margin-bottom: 140rpx;
+}
+.recharge{
+  text-align: center;
+  background: rgba(242, 242, 242, 1);
+  padding: 34rpx 0;
+  border-radius: 10rpx;
+  color: rgb(153, 153, 153);
+  float: left;
+  width: 330rpx;
+  margin-bottom: 30rpx;
+}
+.recharge:nth-child(even){
+  float: right;
+}
+.recharge text{
+  font-size:36rpx;
+  color: #FF583E; 
+}
+
+
+.on{
+  background: rgb(0, 153, 255);
+  color: #fff;
+}
+.on text{
+  color: #fff;
+}

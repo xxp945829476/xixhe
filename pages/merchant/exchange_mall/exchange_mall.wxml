@@ -1,0 +1,8 @@
+<!--pages/merchant/exchange_mall/exchange_mall.wxml-->
+
+<navigator class='mall_box' url='/pages/merchant/mall_detail/mall_detail'>
+    <image src='/images/pic.jpg'></image>
+    <view>红包兑换卡</view>
+    <text>300积分</text>
+</navigator>
+

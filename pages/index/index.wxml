@@ -1,0 +1,45 @@
+<map id="map"  scale="{{scale}}" bindcontroltap="controltap" markers="{{markers}}" 
+latitude="{{latitude}}"
+longitude ="{{longitude}}"
+controls="{{controls}}" show-location bindregionchange="regionchange" style="width: 100%; height: {{view.Height}}px;">
+      <cover-view class='bottom_fun'>
+          <cover-view class='index_btn xui_flex xui_align_items' bindtap='linksite'>
+            <cover-view class='xui_flex_item'>洗车站点</cover-view>
+          </cover-view>
+          <cover-view class='index_btn xui_flex xui_align_items'>
+              <cover-view class='xui_flex_item' bindtap='scancode'>
+                    扫码支付
+                    <cover-view class='jf_tip'>积分支付  免费洗车</cover-view>
+              </cover-view>
+          </cover-view>
+      </cover-view>
+      <cover-view class='meun_box'>
+            <cover-view class='my_box fl'>
+                <cover-image src='/images/my.png'  bindtap='meunMy' class='img'></cover-image>
+            </cover-view>
+            <cover-view class='my_box fr' bindtap='meunShow'>
+                <cover-image src='/images/meun.png' class='img'></cover-image>
+            </cover-view>
+      </cover-view>
+
+      <cover-view class="meun_list_box {{ison?'on':'right'}}">
+            <cover-view class='meun_list xui_flex' bindtap='linksite'>
+             <cover-image src='/images/qc.png' class='img_1'></cover-image>
+              <cover-view>洗车</cover-view>
+            </cover-view>
+            <cover-view class='meun_list xui_flex'  bindtap='linknew'>
+              <cover-image src='/images/qz.png' class='img_1'></cover-image>
+               <cover-view>车讯圈</cover-view>
+            </cover-view>
+            <cover-view class='meun_list xui_flex' bindtap='linkearn'>
+              <cover-image src='/images/jf.png' class='img_1'></cover-image>
+              <cover-view>赚积分</cover-view>
+            </cover-view>
+      </cover-view>
+</map>
+
+
+
+
+
+

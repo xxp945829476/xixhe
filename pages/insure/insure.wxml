@@ -1,0 +1,77 @@
+
+
+<view class='add_list_box'>
+    <view class='add_list xui_flex'>
+        <view>为谁投保</view>
+        <view class='xui_flex_item add_list_bank'>
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker">
+                  {{array[index]}}
+                </view>
+              </picker>
+        </view>
+    </view>
+    <view class='add_list xui_flex'>
+        <view>有无社保</view>
+        <view class='xui_flex_item add_list_bank'>
+              <picker bindchange="sociaChange" value="{{index}}" range="{{socialArray}}">
+                <view class="picker">
+                  {{socialArray[socialindex]}}
+                </view>
+              </picker>
+        </view>
+    </view>
+    <view class='add_list xui_flex'>
+        <view>出生年份</view>
+        <view class='xui_flex_item add_list_bank'>
+                <picker mode="date" value="{{date}}" start="1950-01-01" end="{{enddate}}" bindchange="bindDateChange">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+        </view>
+    </view>
+    <view class='add_list xui_flex'>
+        <view>姓名</view>
+        <view class='xui_flex_item add_list_bank'>
+              <input placeholder="请输入" bindinput='bindNmae' placeholder-style="color:#999"/>
+        </view>
+    </view>
+    <view class='add_list xui_flex'>
+        <view>联系电话</view>
+        <view class='xui_flex_item add_list_bank'>
+              <input type='number' placeholder="请输入" bindinput='bindTel' placeholder-style="color:#999"/>
+        </view>
+    </view>
+    <!-- <view class='add_list xui_flex xui_align_items'>
+        <view>验证码</view>
+        <view class='xui_flex_item code_fill'> <input placeholder="请输入" bindinput='bindCode' placeholder-style="color:#999"/></view>
+        <view class=' add_list_bank'>
+             <button  class="getcode" bindtap='getCode' disabled="{{disabled}}">{{codename}}</button>
+        </view>
+    </view> -->
+    <view class='add_list xui_flex'>
+        <view>选择省</view>
+        <view class='xui_flex_item add_list_bank'>
+              <picker bindchange="bindProvinceChange" value="{{index}}" range="{{citySrray}}"  range-key="name">
+                <view class="picker">
+                    {{citySrray[minIndex].name}}
+                </view>
+              </picker>
+        </view>
+    </view>
+    <view class='add_list xui_flex'>
+        <view>选择市</view>
+        <view class='xui_flex_item add_list_bank'>
+              <picker bindchange="bindCityChange" value="{{index}}" range="{{citySrray[minIndex].city}}"  range-key="name">
+                <view class="picker">
+                    {{citySrray[minIndex].city[cityIdex].name}}
+                </view>
+              </picker>
+        </view>
+    </view>
+
+</view>
+
+<view class='btn' bindtap='submit'>预约提交</view>
+

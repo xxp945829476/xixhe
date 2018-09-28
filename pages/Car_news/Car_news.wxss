@@ -1,0 +1,48 @@
+/* pages/Car_news/Car_news.wxss */
+page{
+  background: #f5f3f1;
+}
+.nav_box{
+  background: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 22;
+}
+.nav_list{
+  text-align: center;
+  font-size: 30rpx;
+  /* height: 80rpx; */
+  line-height: 80rpx;
+}
+.nav_list.on text{
+  border-bottom: 2rpx solid #4b4c5e;
+  display: inline-block;
+  pad: 0 10rpx;
+}
+.new_list_box{
+  background: #fff;
+   margin-top: 20rpx;
+}
+.new_list{
+  padding:  20rpx 30rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.pic{
+  width: 300rpx;
+  height: 220rpx;
+  display: block;
+}
+.new_list_title{
+  padding-right: 15rpx;
+  margin-top: 20rpx;
+  position: relative;
+}
+.new_list_title .ellipsis{
+  font-size: 30rpx;
+}
+.new_list_title text{
+  position: absolute;
+  bottom: 30rpx;
+  color: rgb(161, 161, 161);
+}

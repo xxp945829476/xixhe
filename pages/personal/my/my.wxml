@@ -1,0 +1,67 @@
+<!--index.wxml-->
+
+<view class='xui_flex my_top_box xui_align_items'>
+    <navigator class='tx_top' url='/pages/personal/message/message' hover-class='none'>
+         <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </navigator>
+    <navigator class='xui_flex_item' url='/pages/personal/message/message' hover-class='none'>
+          <view class='top_name'>{{userInfo.nickName}}</view>
+          <text class='top_tip'>个人用户</text>
+    </navigator>
+    <navigator class='switch_top' url='/pages/personal/admission/admission'>企业入驻</navigator>
+</view>
+
+<view class='xui_flex nav_my_box'>
+    <view class='xui_flex_item'>
+        <navigator class='xui_flex nav_my xui_align_items' url='/pages/personal/integral/integral' hover-class='none'>
+            <image class='my_icon' src='/images/jifen.png'></image>
+            <view>
+                <view>积分  260</view>
+                <view class='link link_a'>如何获取积分</view>
+            </view>
+        </navigator>
+    </view>
+    <navigator class='xui_flex_item' url='/pages/personal/record/record' hover-class='none'>
+        <view class='xui_flex nav_my nav_my_1 xui_align_items'>
+            <image class='my_icon' src='/images/jl.png'></image>
+            <view>
+                <view hover-class='none'>积分订单</view>
+                <view class='link'>订单记录</view>
+            </view>
+        </view>
+    </navigator>
+</view>
+
+<navigator url='/pages/personal/rescue/rescue' class='link_jy_box'>
+    <image class='link_jy' src='/images/dljy.png' mode='widthFix'></image>
+</navigator>
+
+<view class='xui_flex contact' bindtap='call'>
+    <view  class='xui_flex_item'>联系客服</view>
+    <view>0510-8888888</view>
+</view>
+
+
+
+
+
+
+
+<!-- 弹窗  -->
+
+<view class='modal_box' wx:if="{{show}}">
+    <view class='modal'>
+        <view>
+           <view class='modal_contant'>
+                 微信登录需要获取您的用户信息，请前往设置
+           </view>
+        </view>
+        <view class='modal_btn xui_flex' >
+            <view class='xui_flex_item center'>
+                <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='hq_tx'> 获取头像昵称 </button>
+            </view>
+        </view>
+    </view>
+</view>
+
+

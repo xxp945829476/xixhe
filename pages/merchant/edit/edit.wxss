@@ -1,0 +1,16 @@
+/* pages/personal/edit/edit.wxss */
+.edit_box{
+  padding: 0 30rpx;
+  margin: 40rpx 0 300rpx;
+}
+.edit{
+  border: 1rpx solid #e4e4e4;
+  border-radius: 8rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.edit input{
+  height: 80rpx;
+  padding-left: 30rpx;
+  width: 100%;
+}

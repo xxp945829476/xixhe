@@ -1,0 +1,11 @@
+<!--pages/personal/recharge/recharge.wxml-->
+<view class='recharge_box'>
+    <view class='recharge_list'>
+          <view class="recharge {{num==item.price?'on':''}}" wx:for='{{lists}}' data-id='{{item.price}}' bindtap='selPrice'>
+              <view>{{item.integral}}积分</view>
+              <text>{{item.price}}元</text>
+          </view>
+    </view>
+</view>
+
+<view class='btn'>立即充值</view>

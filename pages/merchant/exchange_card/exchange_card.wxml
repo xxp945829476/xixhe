@@ -1,0 +1,44 @@
+<!--pages/merchant/exchange_card/exchange_card.wxml-->
+
+<view class='card_box'>
+    <view class='card_list'>
+        <image src='/images/kj_bg.png' mode='widthFix'></image>
+        <view class='card_num'>2张红包兑换卡</view>
+        <!-- <view class='now_user now'>立即使用</view> -->
+         <!-- <view class='now_user suc_tips'>提交成功  1-2个工作日到账</view> -->
+         <view class='now_user y_user'>已使用</view>
+    </view>
+</view>
+
+
+<!-- 弹窗  -->
+
+<view class='modal_box' wx:if="{{show}}">
+    <view class='modal modal_f'>
+        <view>
+           <view class='modal_contant'>
+                <view class='xui_flex f_list'>
+                      <text>姓名</text>
+                      <view class='xui_flex_item'>
+                            <input type='text' placeholder='请输入真实姓名'></input>
+                      </view>
+                </view>
+                <view class='xui_flex f_list'>
+                      <text>手机号码</text>
+                      <view class='xui_flex_item'>
+                            <input type='text' placeholder='请输入手机号码'></input>
+                      </view>
+                </view>
+                <view class='xui_flex f_list'>
+                      <text>收款账号</text>
+                      <view class='xui_flex_item'>
+                            <input type='text' placeholder='请填写支付宝账号'></input>
+                      </view>
+                </view>
+
+                <view class='f_tips'>*请如实填写您的支付宝账号，客服将在1-2个工作日完成入账，且请保持电话畅通。</view>
+                <view class='btn btn_f'>使用现金券</view>
+           </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,26 @@
+<!--pages/Car_news/Car_news.wxml-->
+
+<view>
+    <view class='nav_box xui_flex'>
+          <view class="nav_list xui_flex_item {{item.id==categoriesId?'on':''}}" wx:for="{{navList}}" bindtap='tab' id='{{item.id}}'>
+            <text>{{item.categories}}</text>
+          </view>
+    </view>
+
+    <view class='line'></view>
+
+    <view class='new_list_box'>
+          <navigator class='xui_flex new_list' url="/pages/news_details/news_details?id={{item.id}}" wx:for='{{lists}}'>
+              <view class='xui_flex_item new_list_title'>
+                  <view class='ellipsis'>{{item.title}}</view>
+                  <text>{{item.clicks==null?'0':item.clicks}}浏览</text>
+              </view>
+              <view>
+                <image class='pic' mode="aspectFit" src='{{item.picUrl}}'></image>
+              </view>
+          </navigator>
+         
+    </view>
+
+
+</view>

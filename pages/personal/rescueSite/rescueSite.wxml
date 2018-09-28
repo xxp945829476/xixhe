@@ -1,0 +1,40 @@
+<!--pages/site/site.wxml-->
+
+<view>
+      <view class='xui_flex site_list xui_align_items'>
+        <view class='xui_flex_item'>
+          <view class='site_title'>圆润洗车行</view>
+          <view class='site_address'>无锡市滨湖区溪缘路雪浪街道200号</view>
+          <view class='site_tel'>吴先生<text>18961179988</text></view>
+        </view>
+          <view class='set_dan'>
+              <view class='site_btn' bindtap='navigation'>预约</view>
+              <text>1.1公里</text>
+          </view>
+      </view>
+      <view class='xui_flex site_list xui_align_items'>
+        <view class='xui_flex_item'>
+          <view class='site_title'>圆润洗车行</view>
+          <view class='site_address'>无锡市滨湖区溪缘路雪浪街道200号</view>
+          <view class='site_tel'>吴先生<text>18961179988</text></view>
+        </view>
+          <view class='set_dan'>
+              <view class='site_btn'>预约</view>
+              <text>1.1公里</text>
+          </view>
+      </view>
+      <view class='xui_flex site_list xui_align_items'>
+        <view class='xui_flex_item'>
+          <view class='site_title'>圆润洗车行</view>
+          <view class='site_address'>无锡市滨湖区溪缘路雪浪街道200号</view>
+          <view class='site_tel'>吴先生<text>18961179988</text></view>
+        </view>
+          <view class='set_dan'>
+              <view class='site_btn'>预约</view>
+              <text>1.1公里</text>
+          </view>
+      </view>
+</view>
+
+
+

@@ -1,0 +1,57 @@
+/* pages/merchant/exchange_card/exchange_card.wxss */
+.card_box{
+  margin-top: 60rpx;
+}
+.card_list{
+   margin: 0 30rpx;
+   position: relative;
+   color: #fff;
+   box-sizing: border-box;
+}
+.card_list image{
+  width: 100%;
+}
+.card_num{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 20rpx;
+  box-sizing: border-box;
+}
+.now_user{
+  position: absolute;
+  bottom:40rpx;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.now{
+   text-decoration: underline;
+   color: #fff48d;
+}
+
+.suc_tips{
+  color: #830404;
+}
+.y_user{
+  text-decoration: line-through;
+}
+
+.f_list{
+  border-bottom:1rpx solid #f8f8f8;
+  padding: 20rpx 0;
+}
+.f_list input{
+  text-align: right;
+}
+.modal_f{
+  border-radius: 0;
+}
+.f_tips{
+  font-size: 20rpx;
+  color: #66CCFF;
+  margin: 20rpx 0 30rpx;
+}
+.btn_f{
+  width: 100%;
+}
