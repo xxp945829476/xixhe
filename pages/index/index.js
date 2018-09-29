@@ -1,51 +1,14 @@
-var QQMapWX = require('../../lib/qqmap-wx-jssdk.min.js');
-var qqmapsdk;
+// var QQMapWX = require('../../lib/qqmap-wx-jssdk.min.js');
+// var qqmapsdk;
+
+var wxRequest = require('../../utils/wxRequest.js')
+var nearEnterprise = require("../../config.js").nearEnterprise;
 
 Page({
   data: {
     ison:false,
-    listData:[],
     getData: [
-      {
-        "id": 1,
-        // "placeName": "中关村广场",
-        "placeImageUrl": "",
-        "placeAddress": "江南大学",
-        "longitude": "120.277757",
-        "latitude": "31.489746"
-      },
-      {
-        "id": 2,
-        // "placeName": "中关村广场",
-        "placeImageUrl": "",
-        "placeAddress": "海岸城",
-        "longitude": "120.301923",
-        "latitude": "31.494951"
-      },
-       {
-        "id": 3,
-        // "placeName": "中关村广场",
-        "placeImageUrl": "",
-        "placeAddress": "南禅寺",
-        "longitude": "120.312563",
-        "latitude": "31.57326"
-      },
-      {
-        "id": 4,
-        // "placeName": "中关村广场",
-        "placeImageUrl": "",
-        "placeAddress": "无锡体育中心",
-        "longitude": "120.271532",
-        "latitude": "31.548368"
-       },
-       {
-         "id": 5,
-         // "placeName": "中关村广场",
-         "placeImageUrl": "",
-         "placeAddress": "三阳广场",
-         "longitude": "120.306399",
-         "latitude": "31.581373"
-       }
+      
     ],
     scale: '14',
     Height: '0',
@@ -61,34 +24,15 @@ Page({
   },
   onLoad: function () {
     var that = this;
-
-    qqmapsdk = new QQMapWX({
-      key: '7XQBZ-ASOEW-LYMRB-O5O4J-N5Q75-LRB5E'
-    });
-
-    // that.setData({
-    //   url: app.globalData.url
-    // })
-
-    // var data = JSON.stringify({
-    //   page: 1,
-    //   pageSize: 10,
-    //   request: {
-    //     placeLongitude: app.globalData.longitude,
-    //     placeLatitude: app.globalData.latitude,
-    //     userId: app.globalData.userId
-    //   }
-    // })
     wx.getLocation({
       type: 'wgs84', //返回可以用于wx.openLocation的经纬度
       success: (res) => {
-        
         that.setData({
           scale: 13,
           longitude: res.longitude,
           latitude: res.latitude
         });
-        that.getDtan()
+        that.getList(res.longitude, res.latitude)
       }
     });
 
@@ -99,74 +43,37 @@ Page({
           view: {
             Height: res.windowHeight
           },
-
         })
       }
     });
 
   },
+  getList: function (longitude,latitude){
+    var that = this;
+    var data = {};
+    var url = nearEnterprise + '/' + latitude + ',' + longitude;
+    wxRequest.getRequest(url, data).then(function (res) {
+      console.log(res.data)
+        that.setData({
+          getData: res.data.rows
+        });
+      that.getDtan()
+    })
+  },
   getDtan:function(){
     var that = this;
-    qqmapsdk.calculateDistance({
-      from: {
-        latitude: that.data.latitude,
-        longitude: that.data.longitude
-      },
-      to: that.data.getData,
-      success: function (res) {
-        console.log(res);
-        var arr = [];
-        var recently = [];
-        console.log(res.result.elements[0].distance);
-        res.result.elements.forEach(function (element) {
-          arr.push(element.distance)
-        });
-
-        arr = arr.sort(that.sortNumber);
-        console.log(arr);
-        res.result.elements.forEach(function (element,index) {
-        
-          if (element.distance == arr[0]){
-               
-                res.result.elements[index].to['distance'] = element.distance
-                recently.push(res.result.elements[index].to)
-          } else if (element.distance == arr[1]){
-            res.result.elements[index].to['distance'] = element.distance
-            recently.push(res.result.elements[index].to)
-          } else if (element.distance == arr[2]) {
-            res.result.elements[index].to['distance'] = element.distance
-            recently.push(res.result.elements[index].to)
-          }
-         
-        });
-
-        console.log(recently)
-
+    wx.getLocation({
+      type: 'wgs84', //返回可以用于wx.openLocation的经纬度
+      success: (res) => {
         that.setData({
-          listData: recently
+          markers: that.getSchoolMarkers(),
+          scale: 13,
+          longitude: res.longitude,
+          latitude: res.latitude
         });
-        wx.getLocation({
-          type: 'wgs84', //返回可以用于wx.openLocation的经纬度
-          success: (res) => {
-
-            that.setData({
-              markers: that.getSchoolMarkers(),
-              scale: 13,
-              longitude: res.longitude,
-              latitude: res.latitude
-            });
-          }
-        });
-
-      },
-      
-      fail: function (res) {
-        console.log(res);
+       
       }
     });
-  },
-  sortNumber: function (a, b) {
-    return a - b
   },
   controltap(e) {
     this.moveToLocation()
@@ -174,8 +81,8 @@ Page({
   getSchoolMarkers() {
 
     var market = [];
-
-    for (let item of this.data.listData) {
+    console.log(this.data.getData)
+    for (let item of this.data.getData) {
 
       let marker1 = this.createMarker(item);
 
@@ -192,8 +99,9 @@ Page({
     return a.split(".")[0] + '.' + str;
   },
   createMarker(point) {
-    let latitude = point.lat;
-    let longitude = point.lng;
+    console.log(point)
+    let latitude = point.latitude;
+    let longitude = point.longitude;
     let marker = {
       iconPath: "../../images/che.png",
       id: point.id || 0,
@@ -212,8 +120,9 @@ Page({
     return marker;
   },
   linksite:function(){
+    var that = this;
     wx.navigateTo({
-      url: '/pages/site/site'
+      url: '/pages/site/site?latitude=' + that.data.latitude + '&longitude=' + that.data.longitude
     })
   },
   linknew:function(){

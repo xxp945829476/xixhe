@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/personal/appointment/appointment",
     "pages/index/index",
     "pages/personal/record/record",
    
@@ -11,7 +12,7 @@
     "pages/personal/message/message",
     "pages/personal/edit/edit",
     "pages/personal/rescueSite/rescueSite",
-    "pages/personal/appointment/appointment",
+    
     "pages/personal/rescue/rescue",
     "pages/personal/noadopt/noadopt",
    

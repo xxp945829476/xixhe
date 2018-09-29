@@ -13,7 +13,7 @@ var config = {
   host,
 
   //根据经纬度获取企业列表
-  articleListUrl: `${host}/enterprise/list_near_enterprise`,
+  // articleListUrl: `${host}/enterprise/list_near_enterprise`,
 
   //文章列表
   articleListUrl: `${host}/article/list`,

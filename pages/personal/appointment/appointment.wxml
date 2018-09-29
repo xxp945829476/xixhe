@@ -5,14 +5,20 @@
     <view class='admiss_box'>
           <view class='xui_flex admiss_list admiss_list_1'>
               <view>获取门店坐标</view>
-              <view class='admiss xui_flex_item'>请获取</view>
+              <view class='admiss xui_flex_item' bindtap='getLoca'>{{tude}}</view>
               <text class='xui_lt'></text>
           </view>
     </view>
      <view class='admiss_box'>
           <view class='xui_flex admiss_list admiss_list_1'>
               <view>车型</view>
-              <view class='admiss xui_flex_item'>请选择</view>
+              <view class='admiss xui_flex_item'>
+                  <picker bindchange="bindPickerChange" value="{{index}}" range="{{service}}">
+                    <view class="picker">
+                      {{service[index]}}
+                    </view>
+                  </picker>
+              </view>
               <text class='xui_lt'></text>
           </view>
     </view>
@@ -20,7 +26,7 @@
           <view class='xui_flex admiss_list'>
               <view>手机号</view>
               <view class='admiss xui_flex_item'>
-                  <input type='text' placeholder='请输入手机号码' placeholder-style='color:#999'></input>
+                  <input type='number' value='{{tel}}' bindinput='bindTel' placeholder='请输入手机号码' placeholder-style='color:#999'></input>
               </view>
           </view>
     </view>
@@ -28,7 +34,7 @@
           <view class='xui_flex admiss_list'>
               <view>车牌号</view>
               <view class='admiss xui_flex_item'>
-                <input type='text' placeholder='请输入' placeholder-style='color:#999'></input>
+                <input type='text' placeholder='请输入'  bindinput='bindcarNumber' placeholder-style='color:#999'></input>
               </view>
           </view>
     </view>
@@ -39,6 +45,6 @@
     </view>
     
 
-    <view class='btn subsit'>提交入驻</view>
+    <view class='btn subsit' bindtap='submit'>提交救援</view>
     
 </view>
