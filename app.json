@@ -1,7 +1,13 @@
 {
   "pages": [
-    "pages/personal/appointment/appointment",
+    "pages/merchant/mall_detail/mall_detail",
+    "pages/merchant/exchange_mall/exchange_mall",
+    "pages/merchant/my/my",
+    "pages/merchant/exchange_card/exchange_card",
+    
     "pages/index/index",
+    "pages/personal/appointment/appointment",
+    
     "pages/personal/record/record",
    
     "pages/personal/admission/admission",
@@ -19,11 +25,11 @@
     
     "pages/personal/recharge/recharge",
     "pages/personal/integral/integral",
-    "pages/merchant/my/my",
+    
     "pages/merchant/receip_ code/receip_ code",
-    "pages/merchant/mall_detail/mall_detail",
-    "pages/merchant/exchange_mall/exchange_mall",
-    "pages/merchant/exchange_card/exchange_card",
+    
+    
+    
     "pages/merchant/record/record",
     "pages/merchant/edit/edit",
     "pages/merchant/message/message",

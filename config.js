@@ -70,7 +70,11 @@ var config = {
   cardList: `${host}/card/list`,
 
    //现金券兑换
-  exchangeSave: `${host}/enterprise/exchange/save`
+  exchangeSave: `${host}/enterprise/exchange/save`,
+   //商品列表
+  goodsList: `${host}/goods/list`,
+  //购买商品
+  goodsBuy: `${host}/card/save`
 
 };
 

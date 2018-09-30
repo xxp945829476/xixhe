@@ -1,4 +1,6 @@
 // pages/merchant/mall_detail/mall_detail.js
+var wxRequest = require('../../../utils/wxRequest.js')
+var goodsBuy = require("../../../config.js").goodsBuy;
 Page({
 
   /**
@@ -16,52 +18,34 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  add:function(){
+    this.setData({
+      num:++this.data.num
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  minus:function(){
+    if(this.data.num>1){
+      this.setData({
+        num: --this.data.num
+      })
+    }
   },
+  buy:function(){
+    var that = this;
+    let data = {
+      number: that.data.num,
+      goodsId: '',
+      userId: wx.getStorageSync('userId')
+    };
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    });
+    wxRequest.getRequest(goodsBuy, data).then(function (res) {
+      console.log(res.data);
+      wx.hideLoading()
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    })
+    
   }
 })

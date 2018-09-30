@@ -8,11 +8,11 @@
         <text>300积分</text>
     </view>
     <view class='xui_flex sel_box xui_align_items'>
-        <text class='iconfont icon-jian'></text>
+        <text class='iconfont icon-jian' bindtap='minus'></text>
         <view class='f_ad'>
             <input type='text' value='{{num}}'></input>
         </view>
-        <text class='iconfont icon-jia'></text>
+        <text class='iconfont icon-jia' bindtap='add'></text>
     </view>
 
     <view class='ds_box'>
@@ -20,7 +20,7 @@
         <text>该红包兑换卡，可根据数量自行选择，购买后可在“我的卡券”中查看使用。</text>
     </view>
 
-    <view class='bay_btn'>积分购买</view>
+    <view class='bay_btn' bindtap='buy'>积分购买</view>
 </view>
 
 
