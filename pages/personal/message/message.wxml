@@ -8,32 +8,50 @@
         </view>
     </view>
 
-    <navigator class='xui_flex fill_list' url="/pages/personal/edit/edit?type=姓名">
+    <navigator class='xui_flex fill_list' url="/pages/personal/edit/edit?type=姓名&name={{name}}">
         <text>姓名</text>
         <view class='xui_flex_item fill_info xui_lt'>{{name}}</view>
     </navigator>
      <view class='xui_flex fill_list'>
         <text>性别</text>
-        <view class='xui_flex_item fill_info xui_lt'>{{sex}}</view>
+        <view class='xui_flex_item fill_info xui_lt'>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+              <view class="picker">
+                {{array[index]}}
+              </view>
+            </picker>
+        </view>
     </view>
-     <navigator class='xui_flex fill_list' url="/pages/personal/edit/edit?type=手机号码">
+     <navigator class='xui_flex fill_list' url="/pages/personal/edit/edit?type=手机号码&tel={{tel}}">
         <text>手机号码</text>
         <view class='xui_flex_item fill_info xui_lt'>{{tel}}</view>
     </navigator>
-     <navigator class='xui_flex fill_list' url="/pages/personal/edit/edit?type=车牌号">
+     <navigator class='xui_flex fill_list' url="/pages/personal/edit/edit?type=车牌号&plate={{plate}}">
         <text>车牌号</text>
         <view class='xui_flex_item fill_info xui_lt'>{{plate}}</view>
     </navigator>
      <view class='xui_flex fill_list'>
         <text>车险到期时间</text>
-        <view class='xui_flex_item fill_info xui_lt'>(选填)</view>
+        <view class='xui_flex_item fill_info xui_lt'>
+            <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+              <view class="picker">
+                {{date}}
+              </view>
+            </picker>
+        </view>
     </view>
      <view class='xui_flex fill_list'>
         <text>驾照到期时间</text>
-        <view class='xui_flex_item fill_info xui_lt'>(选填)</view>
+        <view class='xui_flex_item fill_info xui_lt'>
+            <picker mode="date" value="{{date1}}" bindchange="bindDateChange1">
+              <view class="picker">
+                {{date1}}
+              </view>
+            </picker>
+        </view>
     </view>
-     <view class='xui_flex fill_list'>
+     <navigator class='xui_flex fill_list' url="/pages/personal/edit/edit?type=发动机号&motor={{motor}}">
         <text>发动机号</text>
-        <view class='xui_flex_item fill_info xui_lt'>(选填)</view>
-    </view>
+        <view class='xui_flex_item fill_info xui_lt'>{{motor}}</view>
+    </navigator>
 </view>

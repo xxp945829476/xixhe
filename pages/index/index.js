@@ -4,6 +4,7 @@
 var wxRequest = require('../../utils/wxRequest.js')
 var nearEnterprise = require("../../config.js").nearEnterprise;
 
+
 Page({
   data: {
     ison:false,

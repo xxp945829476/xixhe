@@ -1,11 +1,19 @@
 {
   "pages": [
-    "pages/merchant/mall_detail/mall_detail",
-    "pages/merchant/exchange_mall/exchange_mall",
     "pages/merchant/my/my",
-    "pages/merchant/exchange_card/exchange_card",
-    
     "pages/index/index",
+   
+    
+    "pages/merchant/exchange_mall/exchange_mall",
+    
+    "pages/merchant/exchange_card/exchange_card",
+  
+    "pages/merchant/mall_detail/mall_detail",
+    
+    
+    
+    
+    
     "pages/personal/appointment/appointment",
     
     "pages/personal/record/record",

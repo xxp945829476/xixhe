@@ -27,11 +27,11 @@ Page({
 
   getData: function () {
     var that = this;
-    console.log(that.data.offset)
+    console.log(wx.getStorageSync('userDO').userId)
     let data = {
       limit: that.data.limit,
       offset: that.data.offset,
-      userId: wx.getStorageSync('userId')
+      userId: wx.getStorageSync('userDO').userId,
     };
     wx.showLoading({
       title: '加载中',
@@ -124,7 +124,7 @@ Page({
     };
 
     var data = {
-      userId: wx.getStorageSync('userId'),
+      userId: wx.getStorageSync('userDO').userId,
       cardId:'',
       name:name,
       telephone:tel,

@@ -12,7 +12,7 @@ Page({
    */
   data: {
     show:false,
-    colorHey:true,
+    colorHey:false,
     articleId:'',
     title:'',
     publisher:'',
@@ -64,7 +64,7 @@ Page({
     var that=this;
     var data = {
       articleId: that.data.articleId,
-      userId:wx.getStorageSync('user').openid
+      userId: wx.getStorageSync('userDO').userId
     }
     wxRequest.postRequest(getpoint, data).then(function (res) {
       console.log(res.data);

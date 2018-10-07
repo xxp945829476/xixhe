@@ -183,7 +183,8 @@ Page({
       name: contacts,
       telephone:tel,
       serviceType: that.data.serviceType,
-      picUrl: pic
+      picUrl: pic,
+      userId: wx.getStorageSync('userDO').userId
     }
 
     

@@ -2,6 +2,7 @@
 // var wxApi = require('../../utils/wxApi')
 var wxRequest = require('./utils/wxRequest.js')
 var userIdUrl = require("./config.js").userIdUrl;
+var userSaveUrl = require("./config.js").userSaveUrl;
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -31,9 +32,22 @@ App({
             wx.setStorageSync('user', obj);//存储openid
             var data1 = {};
             var url = userIdUrl + '/' + res.data.openid;
-            wxRequest.getRequest(url, data1).then(function(res){
+
+            var data2 = {
+              openId: res.data.openid
+            };
+            wxRequest.postRequest(userSaveUrl, data2).then(function(res){
               console.log(res.data)
             })
+
+            wxRequest.getRequest(url, data1).then(function (res) {
+              console.log(res.data)
+              if (res.data.code==0){
+                wx.setStorageSync('userDO', res.data.userDO);
+              }
+            })
+
+          
           }
         });
       }

@@ -12,6 +12,9 @@ var config = {
   // 下面的地址配合云端 Server 工作
   host,
 
+   //根据经纬度获取企业列表
+   userSaveUrl: `${host}/user/save`,
+
   //根据经纬度获取企业列表
   // articleListUrl: `${host}/enterprise/list_near_enterprise`,
 
@@ -37,10 +40,10 @@ var config = {
   getpoint: `${host}/point/log/get_point`,
 
   //修改个人信息
-  updateUrl: `${host}/sys/user/update`,
+  updateUrl: `${host}/user/update`,
 
   //获取个人信息
-  infoUrl: `${host}/sys/user/detail`,
+  infoUrl: `${host}/user/detail`,
 
   //企业入驻
   enterpriseSave: `${host}/enterprise/save`,
@@ -74,7 +77,11 @@ var config = {
    //商品列表
   goodsList: `${host}/goods/list`,
   //购买商品
-  goodsBuy: `${host}/card/save`
+  goodsBuy: `${host}/card/save`,
+
+
+  //文件获取
+  fileUrl: `${host}/`
 
 };
 

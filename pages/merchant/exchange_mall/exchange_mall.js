@@ -25,7 +25,7 @@ Page({
     let data = {
       limit: that.data.limit,
       offset: that.data.offset,
-      userId: wx.getStorageSync('userId')
+      userId: wx.getStorageSync('userDO').userId
     };
     wx.showLoading({
       title: '加载中',

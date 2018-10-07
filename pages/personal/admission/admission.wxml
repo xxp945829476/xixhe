@@ -40,7 +40,7 @@
     </view>
 
     <view class='textarea_box'>
-        <textarea wx:if='{{discountShow}}' bindblur="bindTextAreaBlur" class='textarea' auto-height placeholder="请输入您的道路救援业务优惠说明（选填）" />
+        <textarea wx:if='{{discountShow}}' bindblur="bindTextAreaBlur" class='textarea' auto-height placeholder="请输入您的业务服务说明（选填）（选填）" />
         <view class='up_title'>上传营业执照/名片</view>
         <view class='up_img' bindtap='upPic'>
             <image src='{{pic}}'></image>
