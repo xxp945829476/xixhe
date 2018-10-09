@@ -30,9 +30,9 @@
           <view class='xui_flex admiss_list'>
               <view class=''>服务种类</view>
               <view class='admiss xui_flex_item'>
-                  <picker bindchange="bindPickerChange" value="{{index}}" range="{{service}}">
+                  <picker bindchange="bindPickerChange" value="{{index}}"  range='{{service}}' range-key="serviceName">
                     <view class="picker">
-                      {{service[index]}}
+                      {{service[index].serviceName}}
                     </view>
                   </picker>
               </view>

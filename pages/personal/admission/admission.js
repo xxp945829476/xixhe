@@ -15,12 +15,12 @@ Page({
     company:'',
     contacts:'',
     tel:'',
-    service: ['洗车','道路救援'],
+    service: [{'id':1,'serviceName':'道路救援'},{'id':2,'serviceName':'洗车'}],
     index: 0,
     discountShow:false,
     pic: '/images/add.png',
     tude:'请获取',
-    serviceType:''
+    serviceType:'',
     
     
   },
@@ -76,18 +76,20 @@ Page({
     })
   },
   bindPickerChange: function (e) {
+    console.log(e.detail);
     this.setData({
+      
       index: e.detail.value
     })
     if (e.detail.value==1){
       this.setData({
         discountShow: true,
-        serviceType:'道路救援'
+        serviceType: 1
       })
     }else{
       this.setData({
         discountShow: false,
-        serviceType: '洗车'
+        serviceType: 2
       })
     }
   },

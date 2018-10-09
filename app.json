@@ -1,9 +1,10 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/merchant/my/my",
    
-   
+   "pages/personal/admission/admission",
     
     "pages/merchant/exchange_mall/exchange_mall",
     
@@ -11,18 +12,11 @@
   
     "pages/merchant/mall_detail/mall_detail",
     
-    
-    
-    
-    
+   
     "pages/personal/appointment/appointment",
     
     "pages/personal/record/record",
    
-    "pages/personal/admission/admission",
-    
-    
-    
     "pages/personal/my/my",
     "pages/personal/message/message",
     "pages/personal/edit/edit",

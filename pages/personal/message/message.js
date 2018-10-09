@@ -181,6 +181,7 @@ Page({
       title: '加载中',
       mask: true
     });
+    console.log(updateUrl);
     wxRequest.postRequest(updateUrl, data).then(function(res) {
       console.log(res.data);
       wx.hideLoading();
