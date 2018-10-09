@@ -137,6 +137,12 @@ Page({
     })
   },
   meunMy:function(){
+    var url = '/pages/personal/my/my';
+    var userDb = wx.getStorageSync('userDO');
+    console.log(userDb);
+    if (userDb != null && userDb.enterprise_certification == 1){
+      url = '/pages/merchant/my/my';
+    }
     wx.navigateTo({
       url: '/pages/personal/my/my'
     })

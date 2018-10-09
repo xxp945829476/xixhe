@@ -36,14 +36,17 @@ App({
             var data2 = {
               openId: res.data.openid
             };
-            wxRequest.postRequest(userSaveUrl, data2).then(function(res){
-              console.log(res.data)
-            })
-
+            
+            
             wxRequest.getRequest(url, data1).then(function (res) {
               console.log(res.data)
               if (res.data.code==0){
                 wx.setStorageSync('userDO', res.data.userDO);
+              }
+              if(res.data.code == 1){ //当code=1时候openid不存在，需要保存数据
+                wxRequest.postRequest(userSaveUrl, data2).then(function (res) {
+                  console.log(res.data)
+                })
               }
             })
 

@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/merchant/my/my",
     "pages/index/index",
+    "pages/merchant/my/my",
+   
    
     
     "pages/merchant/exchange_mall/exchange_mall",
