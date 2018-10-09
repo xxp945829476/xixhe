@@ -71,9 +71,12 @@ Page({
       wx.hideLoading()
       if (res.data.code==0){
         wx.showToast({
-          title: '点赞成功，获得+x积分',
+          title: res.data.msg,
           icon: 'none'
         });
+        that.setData({
+          colorHey:true
+        })
       }else{
         wx.showToast({
           title: '点赞失败',

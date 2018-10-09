@@ -3,6 +3,7 @@
 const app = getApp()
 var wxRequest = require('../../../utils/wxRequest.js')
 // var userIdUrl = require("../../../config.js").userIdUrl;
+var infoUrl = require("../../../config.js").infoUrl;
 
 
 Page({
@@ -10,7 +11,12 @@ Page({
     show:false,
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    name:''
+  },
+
+  onShow:function(){
+    this.getData()
   },
   
   onLoad: function () {
@@ -31,6 +37,7 @@ Page({
       }
     });
 
+   
 
     if (app.globalData.userInfo) {
       this.setData({
@@ -74,6 +81,45 @@ Page({
   call:function(){
     wx.makePhoneCall({
       phoneNumber: '1340000' 
+    })
+  },
+  getData: function () {
+    var that = this;
+    let data = {};
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    })
+
+    var url = infoUrl + '/' + wx.getStorageSync('userDO').userId
+
+    console.log(url)
+    wxRequest.getRequest(url, data).then(function (res) {
+      console.log(res.data);
+      wx.hideLoading()
+      if (res.data.code == 0) {
+        if (res.data.userDO.name == null || res.data.userDO.name == '') {
+          that.setData({
+            name: app.globalData.userInfo.nickName,
+          });
+        } else {
+          that.setData({
+            name: res.data.userDO.name,
+          });
+        };
+
+ 
+
+        that.setData({
+          tel: res.data.userDO.mobile,
+          plate: res.data.userDO.carNumber,
+          motor: res.data.userDO.engineNumber,
+          date: res.data.userDO.insuranceExpirationTime,
+          date1: res.data.userDO.driverLicenseExpiryDate
+        });
+
+      }
+
     })
   },
   

@@ -35,16 +35,7 @@ Page({
    */
   onLoad: function(options) {
 
-    var sexuality;
-    if (app.globalData.userInfo.gender == 1) {
-      sexuality = '男'
-    } else {
-      sexuality = '女'
-    }
-    this.setData({
-      img: app.globalData.userInfo.avatarUrl,
-      sex: sexuality
-    });
+   
 
   },
   getPic: function(pic) {
@@ -92,9 +83,22 @@ Page({
           });
         };
 
+        if (res.data.userDO.sex == null || res.data.userDO.sex == '') {
+          that.setData({
+            index: Number(app.globalData.userInfo.gender)-1,
+          });
+        } else {
+          that.setData({
+            index: Number(res.data.userDO.sex) - 1,
+          });
+        };
+
         that.setData({
           tel: res.data.userDO.mobile,
           plate: res.data.userDO.carNumber,
+          motor: res.data.userDO.engineNumber,
+          date: res.data.userDO.insuranceExpirationTime.substr(0,10),
+          date1: res.data.userDO.driverLicenseExpiryDate.substr(0, 10)
         });
 
       }
@@ -106,7 +110,8 @@ Page({
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       index: e.detail.value
-    })
+    });
+    this.sure(3)
   },
 
   upHeader: function() {
@@ -167,11 +172,19 @@ Page({
     console.log(that.data.date)
     if (sta == 1) {
       data = {
-        insuranceExpirationTime: that.data.date
+        insuranceExpirationTime: that.data.date,
+        userId: wx.getStorageSync('userDO').userId
       }
     } else if (sta == 2) {
+      console.log(that.data.date1)
       data = {
-        driverLicenseExpiryDate: that.data.date1
+        driverLicenseExpiryDate: that.data.date1,
+        userId: wx.getStorageSync('userDO').userId
+      }
+    } else if (sta == 3) {
+      data = {
+        sex: Number(that.data.index)+1,
+        userId: wx.getStorageSync('userDO').userId
       }
     }
 

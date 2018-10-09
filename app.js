@@ -39,7 +39,7 @@ App({
             
             
             wxRequest.getRequest(url, data1).then(function (res) {
-              console.log(res.data)
+              console.log(res.data.code)
               if (res.data.code==0){
                 wx.setStorageSync('userDO', res.data.userDO);
               }

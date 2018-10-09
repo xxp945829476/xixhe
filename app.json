@@ -1,8 +1,9 @@
 {
   "pages": [
-    
     "pages/index/index",
     "pages/merchant/my/my",
+    
+   
    
    "pages/personal/admission/admission",
     

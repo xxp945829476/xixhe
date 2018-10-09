@@ -5,7 +5,7 @@
          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     </navigator>
     <navigator class='xui_flex_item' url='/pages/personal/message/message' hover-class='none'>
-          <view class='top_name'>{{userInfo.nickName}}</view>
+          <view class='top_name'>{{name}}</view>
           <text class='top_tip'>个人用户</text>
     </navigator>
     <navigator class='switch_top' url='/pages/personal/admission/admission'>企业入驻</navigator>
